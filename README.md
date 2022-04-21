@@ -1,6 +1,6 @@
 # ExampleSQL
 Requirements:
- * Pthon3
+ * Python3
  * Flask
  * MySQL
 
