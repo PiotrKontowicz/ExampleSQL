@@ -4,7 +4,7 @@ Requirements:
  * Flask
  * MySQL
 
-To make the save, set safe (app.py) to True. When the value is set to False, the app is vulnerable to SQLin. Due to autoescape set to false, this app is also vulnerable to XSS attack.
+To make the app safe, set safe (app.py) to True. When the value is set to False, the app is vulnerable to SQLin. Due to autoescape set to false, this app is also vulnerable to XSS attack.
 
 To set up the database, run:
 ```
